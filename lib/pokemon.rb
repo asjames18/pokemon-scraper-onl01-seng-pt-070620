@@ -21,6 +21,5 @@ class Pokemon
         search = db.execute("SELECT * FROM pokemon WHERE id = ?;", id).flatten
     
         Pokemon.new(id: search[0], name: search[1], type: search[2], db:db)
-      end
-
+    end
 end
